@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Modern To-Do List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="app-title">TaskFlow</h1>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i> Dark Mode
+            </button>
+        </header>
+
+        <div class="task-form">
+            <form id="addTaskForm">
+                <div class="form-group">
+                    <label for="taskInput">Add New Task</label>
+                    <input type="text" class="form-control" id="taskInput" placeholder="What do you need to do?" required>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Add Task
+                </button>
+            </form>
+        </div>
+
+        <div class="tasks-container">
+            <div class="tasks-header">
+                <h2 class="tasks-title">Your Tasks</h2>
+                <span id="tasksCount">0 tasks</span>
+            </div>
+
+            <div class="tasks-list" id="tasksList">
+                <!-- Tasks will be added here dynamically -->
+                <div class="empty-state">
+                    <i class="fas fa-clipboard-list"></i>
+                    <p>No tasks yet. Add a task to get started!</p>
+                </div>
+            </div>
+
+            <div class="tasks-footer">
+                <div class="tasks-count" id="completedCount">0 completed</div>
+                <button class="btn clear-btn" id="clearCompletedBtn">
+                    <i class="fas fa-trash"></i> Clear Completed
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js">    </script>
+</body>
+</html>
